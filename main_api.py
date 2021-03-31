@@ -90,7 +90,7 @@ def stop():
     if request.method == 'POST':
         url_id = request.args.get('URL_ID')
         return delete_deployment(apps_v1, url_id)
-    
+
 if __name__ == "__main__":
     port = 5000
     apps.run(host='0.0.0.0', port=port,threaded=True,debug=False)
